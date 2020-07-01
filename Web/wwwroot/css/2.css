@@ -1,0 +1,9 @@
+﻿ a{
+    transition:0.4s;
+}
+a:hover {
+    background-color: blue;
+    padding-top: 3px;
+    padding-bottom: 9px;
+}
+

@@ -1,0 +1,34 @@
+﻿@model List<Web.Models.Products>
+
+@await Html.PartialAsync("Carousel") @*băng chuyền*@
+<link rel="stylesheet" href="~/css/2.css">
+<h3> Preferd Glasses of the week</h3>
+<h5>Clients preferences- just for you </h5>
+<br/><br/>
+<div class="row">
+         @foreach (var product in Model)
+         {
+             
+                 <div class="col-4" >
+                     <div class="card mb-4 border border-danger">@* viền của từng card là màu đỏ*@
+                         <div class="card-header">
+                             <h4 class="my-0 font-weight-normal">
+                                 <label style="font-size:23px;color:ste elblue;">@product.Name</label>
+                             </h4>
+                         </div>
+
+                         <img class="card-img-top" style="height:100%;" src="@product.Image" alt="Card Image" />
+                         <div class="card-body">
+                             <div class="d-flex justify-content-between align-items-center">
+                                 <div class="btn-group">
+                                     <label style="font-size:20px; color:#a51313"><b>$@product.Price</b></label>
+                                 </div>
+                                 <a asp-action="Details" asp-controller="Home" class="btn btn-success pull-right btn-outline-info" asp-route-id="@product.ProductID"> View Details</a>
+                             </div>
+                         </div>
+
+                     </div>
+                 </div>
+             
+         }
+</div>

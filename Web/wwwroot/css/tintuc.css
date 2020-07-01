@@ -1,0 +1,19 @@
+.a1{
+    text-align: center;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+div {
+    display: block;
+    
+}
+img {
+    display: block;
+     margin-left: auto; 
+     margin-right: auto;
+}
+.row  {
+    text-align: center;
+}

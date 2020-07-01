@@ -1,0 +1,19 @@
+﻿figure.zoom {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+}
+
+figure.zoom:hover {
+        -ms-transform: scale(1.75);
+        -moz-transform: scale(1.75);
+        -webkit-transform: scale(1.75);
+        -o-transform: scale(1.75);
+        transform: scale(1.75);
+        position: relative;
+        z-index: 100;
+
+}

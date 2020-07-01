@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Web.Models.Size>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<br />
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info"> Size List</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-action="Create" class="btn btn-info"><i class="fas fa-plus"></i>&nbsp; New Size</a>
+    </div>
+</div>
+<br />
+<div>
+    <table class="table table-striped border">
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(m => m.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Status)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => item.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Status)
+                </td>
+                <td>
+                    <partial name="_tablebuttonpartial" model="item.SizeID" />
+                </td>
+
+            </tr>
+
+        }
+    </table>
+</div>
+
+
+
